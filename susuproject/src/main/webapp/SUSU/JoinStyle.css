@@ -1,0 +1,162 @@
+@charset "UTF-8";
+
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * { 
+ font-family: 'Noto Sans KR', sans-serif;
+}
+  
+  body {
+    font-family: 'Noto Sans KR', 'Malgun Gothic';
+    margin: 0;
+    padding: 0;
+  }
+
+/* 상단부 */
+header {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(233, 228, 228);
+  margin-bottom: 50px;
+}
+
+
+.logo img {
+  height: 60px;
+  width: 300px;
+}
+
+
+/* 채팅, 나의 채널, 장바구니, 마이페이지 */
+.user-actions {
+  position: flex;
+  margin-right: 0%;
+
+
+}
+
+.user-actions a {
+  font-size: 17px;
+  color: rgb(46, 45, 45);
+  text-decoration: none;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+
+
+.user-actions svg {
+  width: 30px;
+  height: 30px;
+}
+
+#mychannel {
+  width: 27px;
+  height: 27px;
+}
+  
+
+
+
+
+/* 회원가입 창 */
+  .signup-container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+  }
+  h1 {
+    
+    text-align: center;
+  }
+  
+  form {
+    margin-top: 40px;
+  }
+  
+  .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+label {
+    
+    flex-shrink: 0;
+    width: 120px;
+    font-weight: bolder;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .form-group input{
+    display: inline;
+  }
+
+  /* 입력창 스타일 */
+  input[type="text"],
+  input[type="id"],
+  input[type="password"] {
+    flex-grow: 1;
+    width:50%;
+    padding: 10px;
+   
+    border: 1px solid #ccc;
+    color: gray;
+  }
+  .form-group button{
+    margin-right: 10px;
+  }
+
+  /* 버튼 스타일 */
+  button[type="button"]{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+  }
+  
+  button[type="submit"],
+  button[type="button"] {
+    font-family: 'Noto Sans KR', 'Malgun Gothic';
+    background-color: rgba(123, 43, 12, 0.863);
+    color: #fff;
+    padding: 10px 10px ;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex; 
+  }
+  
+  #submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #submit a{
+    text-decoration: none;
+  }
+
+  /* 가입하기 버튼 */
+  input[type="submit"]{
+        font-size: 15px;
+        margin-top: 20px;
+        padding: 10px 40px;
+  }
+  
+ 
+  
+  p {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  p a {
+    color: rgba(123, 43, 12, 0.863);
+  }
+  

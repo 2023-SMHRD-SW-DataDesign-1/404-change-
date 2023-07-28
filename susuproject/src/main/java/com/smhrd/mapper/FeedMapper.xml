@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smhrd.mapper.FeedMapper">
+  
+    <insert id="uploadFeed" parameterType="com.smhrd.modelDTO.FeedDTO">
+        insert into feed(nickname,feed_image1,feed_text,time) VALUES (#{nickname},#{feedImage1},#{text},sysdate)
+    </insert>
+    
+   <insert id="saveComment" parameterType="com.smhrd.modelDTO.FeedCommentDTO"> 
+    	insert into feed_comment values (#{commentNo},#{feedNo},#{nickname},#{profileImage},#{text},sysdate)
+    </insert> 
+	
+	<select id="showFeedComment" resultType="com.smhrd.modelDTO.FeedCommentDTO">
+		select nickname, profile_image, text from feed_comment order by time desc
+	</select>
+  	
+  	<insert id="sumLikes" parameterType="com.smhrd.modelDTO.FeedDTO">
+  		insert into feed(feed_no,nickname,likes) values ( #{feedNo},#{nickname},#{likes})
+  	</insert>
+  	
+  	<select id="selectLikes" resultType="int" parameterType="int">
+  		select sum(likes) from feed where feed_no = {feedNo}
+  	</select>
+  		 
+  	<select id="showMyFeeds" resultType="com.smhrd.modelDTO.FeedDTO" parameterType="String">
+  		select * from feed where nickname=#{nickname}
+  	</select>
+  	
+  	<select id="showAllLikesFeeds" resultType="com.smhrd.modelDTO.FeedDTO" >
+		SELECT F.*, P.PROFILE_IMAGE FROM Feed F INNER JOIN Profile P ON F.NICKNAME = P.NICKNAME ORDER BY F.LIKES DESC
+  	</select>
+  	
+  	<select id="showAllSubcriptionFeeds" resultType="com.smhrd.modelDTO.FeedDTO" >
+		SELECT F.*, P.PROFILE_IMAGE FROM Feed F INNER JOIN Follow FL ON F.NICKNAME = FL.FOLLOWING_NAME INNER JOIN Profile P ON F.NICKNAME = P.NICKNAME WHERE FL.NICKNAME = '#{nickname}' ORDER BY F.TIME DESC
+  	</select>
+  	
+  	<select id="getProfileImage" resultType="String">
+    SELECT profileImage FROM profile WHERE nickname = #{nickname}
+	</select>
+	
+</mapper>

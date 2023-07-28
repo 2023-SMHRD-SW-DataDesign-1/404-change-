@@ -1,0 +1,139 @@
+@charset "UTF-8";
+
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+* {
+  font-family: 'Noto Sans KR', 'Malgun Gothic';
+  margin: 0;
+  padding: 0;
+}
+
+/* 상단부 */
+header {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(233, 228, 228);
+  margin-bottom: 50px;
+}
+
+
+.logo img {
+  height: 60px;
+  width: 300px;
+}
+
+
+/* 채팅, 나의 채널, 장바구니, 마이페이지 */
+.user-actions {
+  position: flex;
+  margin-right: 0%;
+
+
+}
+
+.user-actions a {
+  font-size: 17px;
+  color: rgb(46, 45, 45);
+  text-decoration: none;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+
+
+.user-actions svg {
+  width: 30px;
+  height: 30px;
+}
+
+#mychannel {
+  width: 27px;
+  height: 27px;
+}
+/* 피드 등록 게시판*/
+.feed-board{
+    font-family: 'Noto Sans KR', 'Malgun Gothic';
+    width: 50%;
+    height: 1000px;
+    margin-left: 35%;
+}
+
+/* 파일 선택 영역 */
+.file-container{
+    width: 90%;
+    background-color: white;
+    border: 1px solid rgb(233, 228, 228);
+    text-align: center;
+    font-size: 30px;
+}
+
+.file-container svg{
+    width: 100px;
+    height: 400px;
+    color: rgb(204, 202, 202);
+}
+
+.file-container span{
+    vertical-align: middle;
+    margin-top: 5px;
+    margin-left: 5px;
+    color: rgb(204, 202, 202);
+}
+
+
+/* 피드 이미지 */
+.feed-img{
+    width: 65%;
+}
+
+.feed-img img{
+    width: 100%;
+    height: 500px;
+}
+
+/* 피드 텍스트 */
+.feed-text textarea {
+    font-family: 'Noto Sans KR', 'Malgun Gothic';
+    width: 65%;
+    height: 200px;
+    font-size: 20px;
+    border: 1px solid rgb(233, 228, 228);
+    resize: none;
+    padding-top: 20px;
+    padding-left: 20px;
+   
+}
+
+
+
+/* 등록하기 */
+
+button[type="submit"] {
+    font-family: 'Noto Sans KR', 'Malgun Gothic';
+    font-size: 20px;
+    background-color: rgba(99, 94, 93, 0.863);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5%;
+    margin-left: 25%;
+    padding: 10px 40px;
+    text-align: center;
+
+
+}
+
+.submit a{
+    text-decoration: none;
+    color: white;
+}
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smhrd.mapper.NoticeMapper">
+  
+	<insert id="UploadNotice" parameterType="com.smhrd.modelDTO.NoticeDTO">
+		insert into notice(notice_no,nickname,text,time,title) values(notice_no_seq.NEXTVAL,#{nickname},#{text},sysdate,#{title})
+	</insert>
+
+	<select id="showAllNotice" resultType="com.smhrd.modelDTO.NoticeDTO" parameterType="String">
+		select title from notice where nickname=#{nickname}
+	</select>
+  
+    <select id="showOneNotice" resultType="com.smhrd.modelDTO.NoticeDTO" parameterType="int">
+  		select * from notice where notice_no=#{noticeNo}
+  	</select>
+  
+</mapper>

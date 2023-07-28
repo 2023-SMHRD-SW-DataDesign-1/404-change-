@@ -1,0 +1,301 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+* {
+    font-family: 'Noto Sans KR', 'Malgun Gothic';
+    margin: 0;
+    padding: 0;
+}
+
+/* 상단부 */
+header {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(233, 228, 228);
+    margin-bottom: 50px;
+}
+
+
+.logo img {
+    height: 60px;
+    width: 300px;
+}
+
+
+/* 채팅, 나의 채널, 장바구니, 마이페이지 */
+.user-actions {
+    position: flex;
+    margin-right: 0%;
+
+
+}
+
+.user-actions a {
+    font-size: 17px;
+    color: rgb(46, 45, 45);
+    text-decoration: none;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+
+.user-actions svg {
+    width: 30px;
+    height: 30px;
+}
+
+#mychannel {
+    width: 27px;
+    height: 27px;
+}
+
+/* 상품등록 게시판 */
+.item-board {
+    width: 60%;
+    height: 1000px;
+    margin-left: 20%;
+    align-items: center;
+
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+
+.item-info {
+    display: flex;
+
+}
+
+
+/* 상품정보 종류 */
+.left {
+    width: 13%;
+    height: 60px;
+    margin-left: 15%;
+    margin-right: 0px;
+    border: 1px solid rgb(233, 228, 228);
+
+}
+
+.label {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 40px;
+
+}
+
+
+
+/* 상품정보 입력 */
+.input {
+    display: flex;
+    width: 58.1%;
+    height: 60px;
+    border: 1px solid rgb(233, 228, 228);
+}
+
+.input>input {
+    width: 90%;
+    height: 35px;
+    margin-left: 20px;
+    padding-bottom: 5px;
+    padding-right: 0;
+    margin-top: 10px;
+}
+
+.select {
+    margin-left: 20px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+#item_price {
+    width: 45%;
+}
+
+/* 필수입력 안내 */
+
+input:invalid+span::before {
+    content: '이 입력란을 입력하세요';
+    color: #f44336;
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+  }
+
+
+/* 옵션명 */
+.item_option {
+    width: 45%;
+    height: 35px;
+    margin-left: 20px;
+    padding-bottom: 5px;
+    padding-right: 0;
+    margin-top: 10px;
+}
+
+
+/* 옵션개수 */
+.option_stock {
+    width: 30%;
+    height: 35px;
+    margin-left: 10px;
+
+}
+
+div.add,
+div.delete {
+    display: inline-flex;
+}
+
+/* 옵션 */
+#option {
+    height: fit-content;
+}
+
+.option_edit {
+    flex: 1;
+    width: 100%;
+    margin-bottom: 10px;
+    /* 요소들 사이에 간격을 줍니다. */
+
+}
+
+/* 옵션 추가, 삭제 버튼 */
+.option-edit svg {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    color: #999999;
+}
+
+/* 상품설명 */
+#item-text {
+    font-family: 'Noto Sans KR', 'Malgun Gothic';
+    font-size: 20px;
+    width: 71.3%;
+    border: 1px solid rgb(233, 228, 228);
+    resize: none;
+    margin-left: 15%;
+    margin-top: 0px;
+}
+
+
+/* 파일 첨부 */
+.file {
+    width: 71.3%;
+    border: 1px solid rgb(233, 228, 228);
+    margin-left: 15%;
+}
+
+.item-file {
+    margin-top: 30px;
+    margin-left: 15%;
+    margin-bottom: 20px;
+}
+
+/* input 스타일 변경 */
+.item-file .upload-name {
+    display: inline-block;
+    height: 40px;
+    padding: 0 10px;
+    vertical-align: middle;
+    border: 1px solid #dddddd;
+    width: 70%;
+    color: #999999;
+}
+
+/* label 스타일 변경 */
+.item-file label {
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #fff;
+    vertical-align: middle;
+    background-color: #999999;
+    cursor: pointer;
+    height: 30px;
+    margin-left: 9px;
+}
+
+/* 기존 디자인 삭제 */
+.item-file input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+
+
+/* 아이템 카테고리 */
+.item-ctg {
+    width: 71.3%;
+    margin-left: 15%;
+    padding: 20px;
+    border: 1px solid rgb(233, 228, 228);
+    background-color: white;
+    text-align: center;
+}
+
+#gray {
+    color: gray;
+}
+
+/* 카테고리 변경 버튼 */
+#change {
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 7px;
+    color: #fff;
+    background-color: #999999;
+    cursor: pointer;
+    height: 30px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    border: 0;
+}
+
+/* 상품등록 버튼 */
+#upload {
+    font-family: 'Noto Sans KR', 'Malgun Gothic';
+    font-size: 20px;
+    background-color: rgba(99, 94, 93, 0.863);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 42%;
+    padding: 10px 40px;
+    text-align: center;
+
+
+}
+
+
+#upload a {
+    text-decoration: none;
+    color: white;
+}

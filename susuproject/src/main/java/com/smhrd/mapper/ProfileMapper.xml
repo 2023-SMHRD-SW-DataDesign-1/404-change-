@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smhrd.mapper.ProfileMapper">
+  
+	<update id="updateProfile" parameterType="com.smhrd.modelDTO.ProfileDTO">
+		update profile set profile_image=#{profileImage}, profile_description=#{profileDescription},banner_image=#{bannerImage}  where nickname=#{nickname};
+	</update>
+  
+  	<select id="selectProfile" resultType="com.smhrd.modelDTO.ProfileDTO" parameterType="String">
+  		select * from profile where nickname =#{nickname}
+  	</select>
+  
+</mapper>

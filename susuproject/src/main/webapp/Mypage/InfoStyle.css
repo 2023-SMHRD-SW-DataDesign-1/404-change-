@@ -1,0 +1,160 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * { 
+ font-family: 'Noto Sans KR', sans-serif;
+}
+  
+*{
+    font-family: 'Noto Sans KR', 'Malgun Gothic';
+    margin: 0;
+    padding: 0;
+  }
+
+/* 상단부 */
+header {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(233, 228, 228);
+  margin-bottom: 50px;
+}
+
+
+.logo img {
+  height: 60px;
+  width: 300px;
+}
+
+
+/* 채팅, 나의 채널, 장바구니, 마이페이지 */
+.user-actions {
+  position: flex;
+  margin-right: 0%;
+
+
+}
+
+.user-actions a {
+  font-size: 17px;
+  color: rgb(46, 45, 45);
+  text-decoration: none;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+
+
+.user-actions svg {
+  width: 30px;
+  height: 30px;
+}
+
+#mychannel {
+  width: 27px;
+  height: 27px;
+}
+
+
+
+/* 마이페이지 메뉴(장바구니/주문내역/회원정보 수정 */
+.mypage_ctn {
+  text-align: center;
+  margin-bottom: 40px;
+
+}
+
+/* 회원정보 색깔 */
+#ctn-select a {
+  color: rgba(70, 24, 6, 0.863);
+  border-bottom: 2px solid rgba(70, 24, 6, 0.863);
+  font-weight: 700;
+}
+
+
+/* 장바구니, 회원정보수정 색깔 */
+.mypage_ctn a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  color: gray;
+  text-align: center;
+  display: inline-block;
+  padding: 20px;
+  padding-bottom: 10px;
+  margin-left: 80px;
+  margin-right: 80px;
+  border-bottom: 2px solid rgba(208, 204, 203, 0.863);
+}
+
+/* 회원정보 수정 창 */
+.info-container {
+  max-width: 600px;
+  height: 500px;
+  text-align: center;
+  margin-top: 40px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+form {
+  margin-top: 40px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+label {
+  text-align: left;
+  flex-shrink: 0;
+  width: 130px;
+  font-weight: bolder;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.form-group input {
+  display: inline;
+}
+
+/* 입력창 스타일 */
+input[type="text"],
+input[type="password"] {
+  flex-grow: 1;
+  width: 20%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  color: gray;
+}
+
+
+/* 회원정보 수정 버튼 */
+#submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#submit a {
+  text-decoration: none;
+}
+
+
+button[type="submit"] {
+  font-size: 15px;
+  margin-top: 20px;
+  padding: 10px 40px;
+  font-family: 'HealthsetGothicLight', 'NotoSansKR';
+  background-color: rgba(123, 43, 12, 0.863);
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}

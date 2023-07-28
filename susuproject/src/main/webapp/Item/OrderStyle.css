@@ -1,0 +1,341 @@
+@charset "UTF-8";
+
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+* {
+    font-family: 'Noto Sans KR', 'Malgun Gothic';
+    margin: 0;
+    padding: 0;
+}
+
+.body{
+    height: 1000px;
+}
+.div{
+    overflow: auto;
+}
+
+/* 회원가입, 로그인 */
+.user{
+    width: fit-content;
+    margin-top: 10px;
+    margin-left: 78%;
+    background-color: #f8f8f8;
+}
+
+.user a{
+    text-decoration: none;
+    color: #212121;
+    margin: 15px;
+}
+
+
+/* 상단부 */
+header {
+    font-family: 'HealthsetGothicLight', 'NotoSansKR';
+    height: 100px;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    padding-bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 로고 */
+.logo img {
+    height: 60px;
+    width: 300px;
+    margin-left: 55%;
+
+}
+
+/* 검색창 */
+/* Styles for wrapping the search box */
+
+.main {
+    width: 20%;
+    margin: 50px auto;
+    margin-left: 20%;
+}
+
+/* Bootstrap 4 text input with search icon */
+
+.has-search .form-control {
+    padding-left: 13%;
+}
+
+
+input.form-control {
+    width: 100%;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+.has-search .form-control-feedback a {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: rgba(123, 43, 12, 0.863);
+    
+}
+
+
+
+/* 채팅, 나의 채널, 장바구니, 마이페이지 */
+.user-actions {
+    position: flex;
+    margin-right: 12%;
+
+
+}
+
+.user-actions a {
+    font-size: 17px;
+    color: rgb(46, 45, 45);
+    text-decoration: none;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+
+.user-actions svg{
+    width: 30px;
+    height: 30px;
+}
+
+#mychannel{
+    width: 27px;
+    height: 27px;
+}
+
+
+h4 {
+    margin-top: 10%;
+    text-align: center;
+}
+
+/* 주문 컨테이너 */
+.order-container {
+    margin-top: 20px;
+    margin-left: 35.5%;
+    width: 550px;
+    border: 1px solid rgb(233, 228, 228);
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+
+.item_img {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 40px;
+
+
+}
+
+
+.item_img img {
+    width: 200px;
+    height: 200px;
+}
+
+.item_info {
+
+    margin-left: 20px;
+}
+
+.item_price {
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-bottom: 10px;
+}
+
+.table {
+    width: 400px;
+}
+
+.item_price tr {
+    height: 40px;
+}
+
+.item_price td {
+    margin-top: 10px;
+    font-size: 700;
+    margin-right: 50px;
+}
+
+.price {
+    padding-left: 270px;
+}
+
+.title {
+    margin-top: 50px;
+}
+
+.user-info {
+    margin-top: 20px;
+    margin-left: 35.5%;
+    width: 550px;
+    border: 1px solid rgb(233, 228, 228);
+    border-radius: 10px;
+}
+
+.user-info table {
+    margin: 20px auto;
+}
+
+.label {
+    width: 60px;
+    height: 40px;
+}
+
+
+.delivery-info {
+    margin-top: 20px;
+    margin-left: 35.5%;
+    width: 550px;
+    height: 100%;
+    border: 1px solid rgb(233, 228, 228);
+    border-radius: 10px;
+}
+
+.delivery-info table {
+    margin: 20px auto;
+}
+
+.label {
+    width: 90px;
+    height: 40px;
+}
+
+.address {
+    width: 40px;
+}
+
+.address>button {
+    background-color: white;
+}
+
+.textarea {
+    padding-top: 10px;
+}
+
+.request {
+    margin-top: 20px;
+}
+
+
+/* 결제정보 */
+.price-info {
+    margin-top: 20px;
+    margin-left: 35.5%;
+    width: 550px;
+    height: 150%;
+}
+
+.price-info table {
+    margin: 20px auto;
+    border: 1px solid gray;
+    text-align: center;
+
+}
+
+.price-info tr{
+    width: 100px;
+    height: 60px;
+    padding: 20px;
+    border: 1px solid gray;
+}
+
+.price-info th{
+    width: 150px;
+    padding: 20px;
+    background-color: whitesmoke;
+ 
+}
+
+
+.pay-select{
+    width: 550px;
+    height: 100%;
+    margin-top: 20px;
+    margin-left: 35.5%;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+.pay{
+    padding: 20px;
+    margin-right: 10px;
+}
+
+.pay span{
+    margin-left: 10px;
+}
+
+.pay img{
+    margin-left: 10px;
+}
+
+
+#kakao{
+    width: 60px;
+    height: 30px;
+}
+
+#naver{
+    width: 60px;
+    height: 60px;
+}
+
+
+
+/* 주문하기 */
+.submit{
+    margin-top: 40px;
+    margin-left: 37%;
+}
+
+.submit a{
+    text-decoration: none;
+}
+
+button[type="submit"]{
+    width: 200px;
+    height: 60px;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 18px;
+    margin: 10px;
+    margin-bottom: 100px;
+}
+
+#order{
+    color: rgba(123, 43, 12, 0.863) ;
+    border: 1px solid rgba(123, 43, 12, 0.863);
+}
+
+
+#back{
+    color: white;
+    border: none;
+    background-color: rgba(123, 43, 12, 0.863) ;
+}

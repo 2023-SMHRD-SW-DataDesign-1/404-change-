@@ -1,0 +1,276 @@
+@charset "UTF-8";
+
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+* {
+    font-family: 'Noto Sans KR', 'Malgun Gothic';
+    margin: 0;
+    padding: 0;
+}
+
+.body{
+    height: 1000px;
+}
+.div{
+    overflow: auto;
+}
+
+/* 회원가입, 로그인 */
+.user{
+    width: fit-content;
+    margin-top: 10px;
+    margin-left: 78%;
+    background-color: #f8f8f8;
+}
+
+.user a{
+    text-decoration: none;
+    color: #212121;
+    margin: 15px;
+}
+
+
+/* 상단부 */
+header {
+    font-family: 'HealthsetGothicLight', 'NotoSansKR';
+    height: 100px;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    padding-bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 로고 */
+.logo img {
+    height: 60px;
+    width: 300px;
+    margin-left: 55%;
+
+}
+
+/* 검색창 */
+/* Styles for wrapping the search box */
+
+.main {
+    width: 20%;
+    margin: 50px auto;
+    margin-left: 20%;
+}
+
+/* Bootstrap 4 text input with search icon */
+
+.has-search .form-control {
+    padding-left: 13%;
+}
+
+
+input.form-control {
+    width: 100%;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+.has-search .form-control-feedback a {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: rgba(123, 43, 12, 0.863);
+    
+}
+
+
+
+/* 채팅, 나의 채널, 장바구니, 마이페이지 */
+.user-actions {
+    position: flex;
+    margin-right: 12%;
+
+
+}
+
+.user-actions a {
+    font-size: 17px;
+    color: rgb(46, 45, 45);
+    text-decoration: none;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+
+.user-actions svg{
+    width: 30px;
+    height: 30px;
+}
+
+#mychannel{
+    width: 27px;
+    height: 27px;
+}
+
+/* 브랜드 배너 */
+div#banner{
+    width: 80%;
+    height: 100px;
+    background-color: whitesmoke;
+    border: 1px solid #e2dbdb;
+    border-radius: 5px;
+    margin: 10px auto;
+    background-attachment:fixed;
+}
+
+/* 프로필 영역 */
+.user-info-container {
+    text-align: center;
+    width: 80%;
+    height: 42%;
+    margin-left: 10%;
+    border: 1px solid #e2dbdb;
+    
+}
+
+/* 프로필 사진 */
+.user-info-container img {
+    margin-top: 10px;
+    width: 10%;
+    height: 10%;
+    border-radius: 50%;
+
+}
+
+
+/* 닉네임, 소개글 글씨 */
+.user-info-container p{
+    color: #222222;
+}
+
+
+.user-info-container #nickname{
+    font-weight: 700;
+}
+
+/* 팔로우 정보*/
+.follow-box{
+    border-bottom: 10px;
+}
+
+.follow-box span{
+    margin:5px;
+}
+
+.follow-box a{
+    text-decoration: none;
+    color: #222222;
+}
+
+.count{
+    font-weight: 700;
+}
+
+/* 팔로우, 메시지 버튼 */
+button[type="button"]{
+    margin:10px;
+    margin-bottom: 20px;
+}
+
+.button a{
+    text-decoration: none;
+}
+
+
+/* 공지사항/피드/동영상/판매목록 */
+.channel-ctg{
+    margin-top: 30px;
+    text-align: center;
+   
+
+}
+
+.channel-ctg span{
+    font-size: 20px;
+    margin: 20px 20px 20px 20px;
+   
+}
+
+
+/* 공지사항 피드 동영상 판매목록 글씨 */
+.channel-ctg a{
+    text-decoration: none;
+    color: #212529;
+}
+
+
+#select{
+
+    background-color: whitesmoke;
+    padding:7px;
+    border-radius: 5px;
+}
+
+.line{
+    width: 80%;
+    height: 2px;
+    padding-top: 20px;
+    margin-left: 10%;
+    border-bottom: 1px solid rgb(221, 215, 215);
+}
+
+
+/* 버튼 */
+.button{
+    height: 80px;
+    margin-top: 10px;
+}
+
+#edit{
+    font-size: 18px;
+}
+
+#add{
+    font-size: 23px;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom: 3px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* 게시물 영역 */
+
+.post-box{
+    width: 80%;
+    margin: 10px auto; 
+
+}
+
+.post-box img{
+    width: 100%;
+    height: 110%;
+    border-radius: 5px;
+    /* object-fit: cover; */
+    /* image-rendering: auto; */
+
+
+}
+
+
+.feed{
+    margin-bottom: 20px;
+}
