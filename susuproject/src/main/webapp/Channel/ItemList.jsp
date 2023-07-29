@@ -173,7 +173,7 @@
 
 <% 
 //HttpSession session = request.getSession();
-String nickname = (String) session.getAttribute("nickname");
+
 
 	ProductDTO pdto  = new ProductDTO();
 	ProductDAO pdao = new ProductDAO();

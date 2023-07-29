@@ -1,3 +1,6 @@
+<%@page import="com.smhrd.modelDTO.ProductDTO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.smhrd.modelDTO.FeedDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
 
@@ -123,21 +126,32 @@
 
    </header>
 
+<% 
+String nickname = (String) session.getAttribute("nickname");
+
+
+FeedDTO fdto = new FeedDTO();
+FeedDAO fdao = new FeedDAO();
+ArrayList<FeedDTO> lfeed_list = fdao.showAllLikesFeeds();
+
+%>
+
 
 
    <!--@@@@@ 피드 출력 건들어보겠어! -->
    <!-- 피드 목록 -->
    <div class="feed_container">
-      <c:set var="lfeed_list" value="${FeedDAO.showAllLikesFeeds()}"></c:set>
-      <c:set var="productlink_list" value="${ProductDAO.showProductLink()}"></c:set>
-      <c:set var="s_list" value="${FeedDAO.showAllSubcriptionFeeds()}"></c:set>
-
+ <%
+     // <c:set var="productlink_list" value="${ProductDAO.showProductLink()}"></c:set>
+     // <c:set var="s_list" value="${FeedDAO.showAllSubcriptionFeeds()}"></c:set>
+     // <c:set var="lfeed_list" value="${FeedDAO.showAllLikesFeeds()}"></c:set>
+%>
 
       <!--1번 피드  -->
       <!--좋아요순 피드 -->
       <!-- 피드반복시작 -->
 
-      <c:forEach begin="1" end="100">
+ <%   for(int i = 0; i<50; i++){  // <c:forEach begin="1" end="40">%>
 
          <div class="main_feed">
 
@@ -146,7 +160,7 @@
 
                <a href="../Channel/ChannelMain.jsp"> <img id="profile-img"
                   src="../img/profile_img.png" alt="프로필 사진"> <span
-                  class="nickname">${lfeed_list.nickname}</span>
+                  class="nickname"><%=lfeed_list.get(i).getNickname()   %></span>
                </a>
             </div>
 
@@ -154,7 +168,7 @@
             <div class="feed-img">
                <!--사진을 클릭하면 피드 상세화면으로 이동 -->
                <a href="../ChannelDetail/FeedDetail.jsp"> 
-               <img src="../img2/${lfeed_list.feedImages}.jpg" class="card-img-top" alt="피드 사진">
+               <img src="../img2/<%= lfeed_list.get(i).getFeedImages() %>.jpg" class="card-img-top" alt="피드 사진">
                </a>
             </div>
 
@@ -162,10 +176,12 @@
             <div class="feed-text">
 
                <a href="../ChannelDetail/FeedDetail.jsp">
-                  <p>${lfeed_list.text}</p>
+                  <p><%=lfeed_list.get(i).getText() %>></p>
                </a>
             </div>
 
+<% ProductDTO pdto = new ProductDTO()
+   %>
 
             <!-- 상품상세페이지 연결-->
             <div class="feed-info">
@@ -205,7 +221,7 @@
                   </div>
                   <!--item_link-->
 
-               </c:forEach>
+  <%}  //             </c:forEach> %>
                <!--상품반복 끝-->
 
             </div>
