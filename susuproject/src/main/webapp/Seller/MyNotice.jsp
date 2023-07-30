@@ -207,8 +207,8 @@
     <div class="col-lg-4">
         <div class="card">
             <!-- 공지사항 피드를 클릭하면 공지사항 상세 피드로 이동 -->
-                    <input type="hidden" value="<%= notice.getNoticeNo() %>" >
-            <a href="../ChannelDetail/NoticeDetail.jsp?feedNo=<%= notice.getNoticeNo() %>">
+                    <input type="hidden" value="<%= notice.getNotice_no() %>" >
+            <a href="../ChannelDetail/NoticeDetail.jsp?feedNo=<%= notice.getNotice_no() %>">
                 <div class="gray" style="width: 448px; height: 448px; background-color: whitesmoke;"></div>
                 <div class="card-body">
                     <p class="card-text"><%= notice.getTitle() %></p>

@@ -12,8 +12,8 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class NoticeDTO {
-	   private int noticeNo;
-	    private int feedNo;
+	   private int notice_no;
+	    private int feed_no;
 	    private String nickname;
 	    private String text;
 	    private String time;
@@ -38,7 +38,7 @@ public class NoticeDTO {
 	    
 		public NoticeDTO(int noticeNo) {
 			super();
-			this.noticeNo = noticeNo;
+			this.notice_no = notice_no;
 		}
 	    
 	    

@@ -38,9 +38,9 @@ public class FeedCommentDTO {
 		this.text = text;
 	}
 
-	public FeedCommentDTO(int feedNo, String nickname, String text, int likes) {
+	public FeedCommentDTO(int feed_no, String nickname, String text, int likes) {
 		super();
-		this.feed_no = feedNo;
+		this.feed_no = feed_no;
 		this.nickname = nickname;
 		this.text = text;
 		this.likes = likes;

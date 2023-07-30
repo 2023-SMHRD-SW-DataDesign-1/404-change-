@@ -201,9 +201,9 @@ I
             <div class="col-lg-4">
                 <div class="feed">
 
-                    <a href="../ChannelDetail/FeedDetail.jsp?feedNo=<%=mfeed_list.get(i).getFeedNo() %>">
+                    <a href="../ChannelDetail/FeedDetail.jsp?feedNo=<%=mfeed_list.get(i).getFeed_no() %>">
 
-                        <img src="../img/<%= mfeed_list.get(i).getFeedImages() %>.jpg" alt="post_img">
+                        <img src="../img/<%= mfeed_list.get(i).getFeed_image1() %>.jpg" alt="post_img">
                     </a>
                 </div>
             </div>
