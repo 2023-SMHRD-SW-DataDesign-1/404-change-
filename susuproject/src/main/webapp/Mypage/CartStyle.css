@@ -31,10 +31,10 @@ header {
 }
 
 
-/* 회원가입 로그인 마이페이지 */
+/* 채팅, 나의 채널, 장바구니, 마이페이지 */
 .user-actions {
-  position: relative;
-  right: 0px;
+  position: flex;
+  margin-right: 0%;
 
 
 }
@@ -43,12 +43,20 @@ header {
   font-size: 17px;
   color: rgb(46, 45, 45);
   text-decoration: none;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
-.user-actions a:first-child {
-  margin-right: 10px;
+
+
+.user-actions svg {
+  width: 30px;
+  height: 30px;
+}
+
+#mychannel {
+  width: 27px;
+  height: 27px;
 }
 
 
