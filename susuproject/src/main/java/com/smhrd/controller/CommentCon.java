@@ -18,18 +18,18 @@ public class CommentCon extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		int feed_no= Integer.parseInt(request.getParameter("feed_no"));
+		int feedNo= Integer.parseInt(request.getParameter("feedNo"));
 		/* String profileImage = request.getParameter("profileImage"); */
 		String nickname= request.getParameter("nickname");
 		String text = request.getParameter("text");
 		
-		System.out.println(feed_no);
+		System.out.println(feedNo);
 		/* System.out.println(profileImage); */
 		System.out.println(nickname);
 		System.out.println(text);
 		
 		// 수정해야함
-		FeedCommentDTO fcdto = new FeedCommentDTO(feed_no, nickname, text, 0);
+		FeedCommentDTO fcdto = new FeedCommentDTO(feedNo, nickname, text, 0);
 		FeedDAO fdao = new FeedDAO();
 		
 		int row = fdao.saveComment(fcdto);
@@ -41,7 +41,7 @@ public class CommentCon extends HttpServlet {
 		}
 		
 		
-		response.sendRedirect("ChannelDetail/FeedDetail.jsp?feed_no="+feed_no);
+		response.sendRedirect("ChannelDetail/FeedDetail.jsp");
 		
 	}
 

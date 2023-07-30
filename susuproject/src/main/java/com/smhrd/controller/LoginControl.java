@@ -1,10 +1,8 @@
 package com.smhrd.controller;
 
 import java.io.IOException;
-import java.util.Objects;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -12,7 +10,7 @@ import javax.servlet.http.HttpSession;
 
 import com.smhrd.modelDAO.MemberDAO;
 import com.smhrd.modelDTO.MemberDTO;
-@WebServlet("/LoginController")
+
 public class LoginControl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -31,7 +29,7 @@ public class LoginControl extends HttpServlet {
 		// 4.login성공했을 때 회원정보 유지
 		// 정보 유지 -> cookie&session
 		// session 객체 생성
-		if (Objects.nonNull(info)) {
+		if (info != null) {
 			// login성공했을 때 회원정보 유지
 			// 정보 유지 -> cookie&session
 			// session 객체 생성
@@ -44,7 +42,7 @@ public class LoginControl extends HttpServlet {
 		}
 
 		// 5.페이지 이동
-		response.sendRedirect("./SUSU/Main.jsp");
+		response.sendRedirect("./main.jsp");
 
 	}// service
 
