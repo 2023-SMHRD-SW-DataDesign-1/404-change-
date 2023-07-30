@@ -19,7 +19,7 @@ public class MemberDAO {
 	
 	public MemberDTO login(MemberDTO dto) {
 		SqlSession session = sqlSessionFactory.openSession(true);
-		MemberDTO info = session.selectOne("com.smhrd.mapper.memberMapper.login", dto);     //경로 정확하게 >> TYPEALIASES >> ALIAS
+		MemberDTO info = session.selectOne("com.smhrd.mapper.MemberMapper.login", dto);     //경로 정확하게 >> TYPEALIASES >> ALIAS
 		session.close();
 		return info;
 	}

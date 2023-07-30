@@ -12,8 +12,8 @@
     	insert into feed_comment(comment_no,feed_no,nickname, text, likes, time) values (feed_comment_seq.nextval,#{feed_no},#{nickname},#{text},#{likes},sysdate)
     </insert> 
 	
-	<select id="showFeedComment" resultType="com.smhrd.modelDTO.FeedCommentDTO">
-		select nickname, profile_image, text from feed_comment order by time desc
+	<select id="showFeedComment" parameterType="int" resultType="com.smhrd.modelDTO.FeedCommentDTO">
+		select nickname, profile_image, text from feed_comment where feed_no = #{feed_no} order by time desc
 	</select>
   	
   	<insert id="sumLikes" parameterType="com.smhrd.modelDTO.FeedDTO">
@@ -38,6 +38,10 @@
   	
   	<select id="getProfileImage" resultType="String">
     SELECT profileImage FROM profile WHERE nickname = #{nickname}
+	</select>
+	
+	<select id="showFeedDetail" parameterType="int" resultType="com.smhrd.modelDTO.FeedDTO">
+		select * from feed where feed_no = #{feed_no}
 	</select>
 	
 </mapper>

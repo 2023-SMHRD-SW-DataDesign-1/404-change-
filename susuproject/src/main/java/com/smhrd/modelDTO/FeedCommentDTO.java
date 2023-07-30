@@ -15,7 +15,7 @@ import lombok.ToString;
 public class FeedCommentDTO {
 
 	private int commentNo;
-	@NonNull private int feedNo;
+	@NonNull private int feed_no;
 	@NonNull private String profileImage;
 	@NonNull private String nickname;
 	@NonNull private String text;
@@ -24,7 +24,7 @@ public class FeedCommentDTO {
 	    
 	public FeedCommentDTO(int feedNo,String profileImage,String nickname, String text,int likes) {
 		super();
-		this.feedNo = feedNo;
+		this.feed_no = feedNo;
 		this.profileImage= profileImage;
 		this.nickname= nickname;
 		this.likes = likes;
@@ -40,7 +40,7 @@ public class FeedCommentDTO {
 
 	public FeedCommentDTO(int feedNo, String nickname, String text, int likes) {
 		super();
-		this.feedNo = feedNo;
+		this.feed_no = feedNo;
 		this.nickname = nickname;
 		this.text = text;
 		this.likes = likes;
