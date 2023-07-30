@@ -153,13 +153,20 @@ ArrayList<FeedDTO> lfeed_list = fdao.showAllLikesFeeds();
       <!--좋아요순 피드 -->
       <!-- 피드반복시작 -->
 
- <%   for(int i = 0; i<50; i++){  // <c:forEach begin="1" end="40">%>
+ <%   for(int i = 35; i>0; i--){  // <c:forEach begin="1" end="40">%>
  
 <% System.out.println(lfeed_list.get(i).getFeed_no()); %>
 <% System.out.println(lfeed_list.get(i).getNickname()); %>
 <% System.out.println(lfeed_list.get(i).getFeed_image1()); %>
 <% System.out.println(lfeed_list.get(i).getText()); %>
-
+<%  String txt ;
+	if(lfeed_list.get(i).getText() ==null ){
+		txt = " ";
+}else{
+	txt = lfeed_list.get(i).getText();
+}
+	
+	%>
          <div class="main_feed">
 
             <!-- 프로필 정보를 클릭하면 채널메인 화면으로 이동 -->
@@ -183,7 +190,7 @@ ArrayList<FeedDTO> lfeed_list = fdao.showAllLikesFeeds();
             <div class="feed-text">
 
                <a href="../ChannelDetail/FeedDetail.jsp">
-                  <p><%=lfeed_list.get(i).getText() %>></p>
+                  <p><%=txt %>></p>
                </a>
             </div>
 
@@ -192,13 +199,18 @@ ArrayList<FeedDTO> lfeed_list = fdao.showAllLikesFeeds();
 ArrayList<ProductDTO>  item_link = pdao.showItemLink(lfeed_list.get(i).getFeed_no());
    
    %>
-<% if (item_link.size() > 0) { %>
+<% if (item_link.size() == 0) { %>
+<% System.out.println( item_link.get(i).getProduct_name()); %>
+<% System.out.println( item_link.get(i).getProduct_no()); %>
+<% System.out.println( item_link.get(i).getProduct_image1()); %>
+<% System.out.println( item_link.get(i).getProduct_name()); %>
+<% System.out.println( item_link.get(i).getProduct_price()); %>
             <!-- 상품상세페이지 연결-->
             <div class="feed-info">
                
                   <div class="item_link">
                      <div>
-                        <p id="title"><%= item_link.get(i).getProduct_name()%></p>
+                        <p id="title">상품태그</p>
                      </div>
 
                      <div class="items">

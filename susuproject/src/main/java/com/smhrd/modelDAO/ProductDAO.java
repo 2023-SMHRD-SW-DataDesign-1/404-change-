@@ -28,13 +28,13 @@ public class ProductDAO {
 		return  item_list;	
 	}
 	
-	public static ArrayList<ProductDTO> showItemLink(int feedNo){
+	public static ArrayList<ProductDTO> showItemLink(int feed_no){
 		
 		//1. 연결하기
 		SqlSession session=sqlSessionFactory.openSession(true);
 		
 		//2. sql문장 실행하기
-		ArrayList<ProductDTO>  item_list= (ArrayList)session.selectList("showItemLink",feedNo);
+		ArrayList<ProductDTO>  item_list= (ArrayList)session.selectList("showItemLink",feed_no);
 		
 		//3. 연결 종료하기
 		session.close();

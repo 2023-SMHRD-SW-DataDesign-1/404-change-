@@ -9,7 +9,7 @@
   </select>
 
 	<select id="showItemLink" parameterType="int" resultType="ProductDTO">
-		select * from product where feed_no=#{feedNo}
+		select * from product where feed_no=#{feed_no}
 	</select>
 
   

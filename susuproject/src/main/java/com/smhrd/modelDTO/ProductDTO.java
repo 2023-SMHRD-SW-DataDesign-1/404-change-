@@ -24,7 +24,7 @@ public class ProductDTO {
 	String product_image8;
 	String product_image9;
 	String product_image10;
-	int product_price;
+	String product_price;
 	int product_stock1;
 	String product_info;
 	String main_category;
