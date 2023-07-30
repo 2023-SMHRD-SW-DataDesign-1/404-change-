@@ -1,3 +1,5 @@
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
+<%@page import="com.smhrd.modelDAO.ProductDAO"%>
 <%@page import="com.smhrd.modelDTO.ProductDTO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.smhrd.modelDTO.FeedDTO"%>
@@ -152,12 +154,17 @@ ArrayList<FeedDTO> lfeed_list = fdao.showAllLikesFeeds();
       <!-- 피드반복시작 -->
 
  <%   for(int i = 0; i<50; i++){  // <c:forEach begin="1" end="40">%>
+ 
+<% System.out.println(lfeed_list.get(i).getFeed_no()); %>
+<% System.out.println(lfeed_list.get(i).getNickname()); %>
+<% System.out.println(lfeed_list.get(i).getFeed_image1()); %>
+<% System.out.println(lfeed_list.get(i).getText()); %>
 
          <div class="main_feed">
 
             <!-- 프로필 정보를 클릭하면 채널메인 화면으로 이동 -->
             <div class="profile">
-
+				<input type="hidden" value="<%=lfeed_list.get(i).getFeed_no() %>"> 
                <a href="../Channel/ChannelMain.jsp"> <img id="profile-img"
                   src="../img/profile_img.png" alt="프로필 사진"> <span
                   class="nickname"><%=lfeed_list.get(i).getNickname()   %></span>
@@ -168,7 +175,7 @@ ArrayList<FeedDTO> lfeed_list = fdao.showAllLikesFeeds();
             <div class="feed-img">
                <!--사진을 클릭하면 피드 상세화면으로 이동 -->
                <a href="../ChannelDetail/FeedDetail.jsp"> 
-               <img src="../img2/<%= lfeed_list.get(i).getFeedImages() %>.jpg" class="card-img-top" alt="피드 사진">
+               <img src="../img2/<%= lfeed_list.get(i).getFeed_image1() %>.jpg" class="card-img-top" alt="피드 사진">
                </a>
             </div>
 
@@ -180,36 +187,39 @@ ArrayList<FeedDTO> lfeed_list = fdao.showAllLikesFeeds();
                </a>
             </div>
 
-<% ProductDTO pdto = new ProductDTO()
+<% ProductDTO pdto = new ProductDTO();
+   ProductDAO pdao = new ProductDAO();
+ArrayList<ProductDTO>  item_link = pdao.showItemLink(lfeed_list.get(i).getFeed_no());
+   
    %>
-
+<% if (item_link.size() > 0) { %>
             <!-- 상품상세페이지 연결-->
             <div class="feed-info">
-               <c:forEach var="productlink" items="${productlink_list}">
+               
                   <div class="item_link">
                      <div>
-                        <p id="title">상품태그</p>
+                        <p id="title"><%= item_link.get(i).getProduct_name()%></p>
                      </div>
 
                      <div class="items">
                         <div class="item">
 
                            <!-- 상품이미지 -->
-                           <a href="../Item/ItemDetail.jsp"> 
+                           <a href="../Item/ItemDetail.jsp?Product_no=<%=item_link.get(i).getProduct_no()%>"> 
                               <div class="item-img">
-
+								<input type="hidden" value="<%=item_link.get(i).getProduct_no()  %>">
                                  <img
-                                    src="https://www.banul.co.kr/shopimages/banulfren/141000000003.jpg?1631086889"
+                                    src="../img2/<%= item_link.get(i).getProduct_image1()%>.jpg "
                                     alt="상품사진">
                               </div> <!-- 상품이름 -->
                               <div class="item_name">
 
-                                 <p>${productlink_list.product_name}</p>
+                                 <p><%= item_link.get(i).getProduct_name() %></p>
                               </div> <!-- 상품가격 -->
                               <div class="item_price">
 
                                  <p>
-                                    <b>${productlink_list.product_price}</b>
+                                    <b><%= item_link.get(i).getProduct_price() %></b>
                                  </p>
                               </div>
                            </a>
@@ -220,8 +230,8 @@ ArrayList<FeedDTO> lfeed_list = fdao.showAllLikesFeeds();
                      <!--items-->
                   </div>
                   <!--item_link-->
-
-  <%}  //             </c:forEach> %>
+<% } %>
+  <%} %>
                <!--상품반복 끝-->
 
             </div>
@@ -230,90 +240,10 @@ ArrayList<FeedDTO> lfeed_list = fdao.showAllLikesFeeds();
          <!--메인 피드(좋아요순 정렬끝)-->
 
 
-         <!-- 구독자순 정렬 시작 -->
-
-         <div class="main_feed">
-
-            <!-- 프로필 정보를 클릭하면 채널메인 화면으로 이동 -->
-            <div class="profile">
-
-               <a href="../Channel/ChannelMain.jsp"> <img id="profile-img"
-                  src="../img/profile_img.png" alt="프로필 사진"> <span
-                  class="nickname">${sfeed_list.nickname}</span>
-               </a>
-            </div>
-
-            <!-- 피드 이미지 -->
-            <div class="feed-img">
-               <!--사진을 클릭하면 피드 상세화면으로 이동 -->
-               <a href="../ChannelDetail/FeedDetail.jsp"> <img
-                  src="../img2/${sfeed_list.feedImages}.jpg" class="card-img-top"
-                  alt="피드 사진">
-               </a>
-            </div>
-
-            <!-- 피드 텍스트 -->
-            <div class="feed-text">
-
-
-               <a href="../ChannelDetail/FeedDetail.jsp">
-
-                  <p>${sfeed_list.text}</p>
-               </a>
-
-            </div>
-
-            <!-- 상품상세페이지 연결링크 -->
-            <div class="feed-info">
-
-               <c:forEach var="productlink" items="${productlink_list}">
-                  <div class="item_link">
-                     <div>
-                        <p id="title">상품태그</p>
-                     </div>
-
-                     <div class="items">
-                        <div class="item">
-
-                           <a href="../Item/ItemDetail.jsp"> <!-- 상품이미지 -->
-                              <div class="item-img">
-
-                                 <img
-                                    src="https://www.banul.co.kr/shopimages/banulfren/141000000003.jpg?1631086889"
-                                    alt="">
-                              </div> <!-- 상품이름 -->
-                              <div class="item_name">
-
-                                 <p>${productlink_list.product_name }</p>
-                              </div> <!-- 상품가격 -->
-                              <div class="item_price">
-
-                                 <p>
-                                    <b>${productlink_list.product_price}</b>
-                                 </p>
-                              </div>
-                           </a>
-
-                        </div>
-                        <!-- item -->
-
-                     </div>
-                     <!--items-->
-                  </div>
-                  <!-- item_link-->
-
-               </c:forEach>
-               <!--상품반복 끝-->
-
-            </div>
-            <!--feed-info(상품링크)-->
-         </div>
-         <!--main-feed(구독자순 정렬) 끝-->
 
 
 
-
-      </c:forEach>
+      
       <!--전체 반복 끝-->
 
    </div>

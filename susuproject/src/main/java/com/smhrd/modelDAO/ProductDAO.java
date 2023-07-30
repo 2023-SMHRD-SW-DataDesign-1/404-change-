@@ -28,4 +28,19 @@ public class ProductDAO {
 		return  item_list;	
 	}
 	
+	public static ArrayList<ProductDTO> showItemLink(int feedNo){
+		
+		//1. 연결하기
+		SqlSession session=sqlSessionFactory.openSession(true);
+		
+		//2. sql문장 실행하기
+		ArrayList<ProductDTO>  item_list= (ArrayList)session.selectList("showItemLink",feedNo);
+		
+		//3. 연결 종료하기
+		session.close();
+		
+		return  item_list;	
+	}
+	
+	
 }
