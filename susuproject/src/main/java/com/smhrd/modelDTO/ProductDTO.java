@@ -31,6 +31,6 @@ public class ProductDTO {
 	String sub_category;
 	String ai_category;
 	String product_option3;
-	
+	int feed_no;
 	
 }
