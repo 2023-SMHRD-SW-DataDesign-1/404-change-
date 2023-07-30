@@ -23,7 +23,7 @@ public class MemberDTO {
 	private String nickname;
 	private String gender;
 	private int age; 
-	private String address; 
+	private String address;  
 	private String phone;
 	
 

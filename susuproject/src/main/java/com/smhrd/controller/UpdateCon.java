@@ -24,7 +24,7 @@ public class UpdateCon extends HttpServlet {
 		MemberDAO dao = new MemberDAO();
 		int row = dao.update(new MemberDTO(member_id, password, address, phone)); // password,nickname,age,address,phone
 		System.out.println(row);
-		if (row > 0) {
+		if (row > 0) { 
 			response.sendRedirect("Main.jsp");
 			System.out.println("회원정보수정 성공");
 		} else {
