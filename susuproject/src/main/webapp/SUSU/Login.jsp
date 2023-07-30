@@ -20,7 +20,7 @@
             </a>
 
         </div>
-      
+           
         <div class="user-actions">
             <!-- 채팅 -->
             <a href="../SUSU/Chat.jsp">
@@ -69,7 +69,11 @@
 
     <div class="login-container">
         <h1>로그인</h1>
+<<<<<<< HEAD
         <form action="LoginCon" method="post">
+=======
+        <form action="../LoginController" method="post" >
+>>>>>>> branch 'master' of https://github.com/2023-SMHRD-SW-DataDesign-1/404-change-.git
             <div class="form-group">
                 <label for="id">아이디</label>
                 <input type="text" id="id" name="member_id" required>
@@ -78,7 +82,7 @@
                 <label for="password">비밀번호</label>
                 <input type="password" id="password" name="password" required>
             </div>
-        </form>
+        
 
         <h4>소셜계정으로 간편로그인</h4>
         <div class="line"></div>
@@ -153,12 +157,13 @@ function kakaoLogout() {
 <!-- sns 로그인 테스트 공간-->
 
         <div id="submit">
-            <a href="./Main.jsp">
+            <!-- <a href="./Main.jsp"> -->
                 <button type="submit">로그인</button>
 
-            </a>
+            <!-- </a> -->
 
         </div>
+        </form>
         <p>아직 회원이 아니신가요? <a href="./Join.jsp">회원가입</a></p>
     </div>
 </body>
