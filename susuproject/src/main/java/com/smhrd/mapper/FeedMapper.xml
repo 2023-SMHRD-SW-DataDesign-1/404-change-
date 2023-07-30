@@ -9,7 +9,7 @@
     </insert>
     
    <insert id="saveComment" parameterType="com.smhrd.modelDTO.FeedCommentDTO"> 
-    	insert into feed_comment values (#{commentNo},#{feedNo},#{nickname},#{profileImage},#{text},sysdate)
+    	insert into feed_comment(comment_no,feed_no,nickname, text, likes, time) values (feed_comment_seq.nextval,#{feedNo},#{nickname},#{text},#{likes},sysdate)
     </insert> 
 	
 	<select id="showFeedComment" resultType="com.smhrd.modelDTO.FeedCommentDTO">

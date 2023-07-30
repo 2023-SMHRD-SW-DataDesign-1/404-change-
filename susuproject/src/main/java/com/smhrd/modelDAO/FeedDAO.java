@@ -131,6 +131,13 @@ public class FeedDAO {
         
         return profileImage;
     }
+	
+	public String getNickname() {
+	    String nickname = null;
+	    
+	    return nickname;
+	}
+	
 	public int updateFeed(int feedNo) {
 		SqlSession session=sqlSessionFactory.openSession(true);
 		

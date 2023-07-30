@@ -395,6 +395,13 @@ input.form-control {
     margin-right: 10px;
 }
 
+.comment_input {
+  display: none;
+}
+
+.comment_input.show {
+  display: block;
+}
 
 
 
