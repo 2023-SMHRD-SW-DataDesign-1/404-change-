@@ -14,9 +14,18 @@ import lombok.Setter;
 @NoArgsConstructor
 public class FeedDTO {
 
-	private int feedNo;
+	private int feed_no;
 	@NonNull private String nickname;
-	@NonNull private String feedImages;
+	@NonNull private String feed_image1;
+	 private String feed_image2;
+	 private String feed_image3;
+	 private String feed_image4;
+	private String feed_image5;
+	private String feed_image6;
+	private String feed_image7;
+	private String feed_image8;
+	private String feed_image9;
+	private String feed_image10;
     private String[] feedVideos = new String[3];
     @NonNull private String text;
     private int likes;

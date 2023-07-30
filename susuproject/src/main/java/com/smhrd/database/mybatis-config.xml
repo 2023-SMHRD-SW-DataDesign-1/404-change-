@@ -12,6 +12,7 @@
       <typeAlias type="com.smhrd.modelDTO.MemberDTO" alias="MemberDTO" />
       <typeAlias type="com.smhrd.modelDTO.FollowDTO" alias="FollowDTO" />        
       <typeAlias type="com.smhrd.modelDTO.NoticeDTO" alias="NoticeDTO" />        
+      <typeAlias type="com.smhrd.modelDTO.ProductDTO" alias="ProductDTO" />        
  
 
    </typeAliases>
@@ -36,6 +37,7 @@
     <mapper resource="com/smhrd/mapper/NoticeMapper.xml"/>
     <mapper resource="com/smhrd/mapper/ProfileMapper.xml"/>
     <mapper resource="com/smhrd/mapper/ChatMapper.xml"/>
+    <mapper resource="com/smhrd/mapper/ProductMapper.xml"/>
 
     
   </mappers>
