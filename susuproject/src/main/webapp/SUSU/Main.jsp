@@ -199,7 +199,7 @@ ArrayList<FeedDTO> lfeed_list = fdao.showAllLikesFeeds();
 ArrayList<ProductDTO>  item_link = pdao.showItemLink(lfeed_list.get(i).getFeed_no());
    
    %>
-<% if (item_link.size() == 0) { %>
+<% if (item_link.size() > i) { %>
 <% System.out.println( item_link.get(i).getProduct_name()); %>
 <% System.out.println( item_link.get(i).getProduct_no()); %>
 <% System.out.println( item_link.get(i).getProduct_image1()); %>
