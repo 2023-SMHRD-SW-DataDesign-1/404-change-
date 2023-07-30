@@ -87,7 +87,8 @@
       <!-- 메뉴 -->
       <div class="user-actions">
          <!-- 채팅 -->
-         <a href="../SUSU/Chat.jsp"> <svg
+         <%String nickname = (String) session.getAttribute("nickname"); %>
+         <a href="../SUSU/LiveChatPage.jsp?nickname=<%=nickname %>"> <svg
                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                fill="currentColor" class="bi bi-chat-dots" viewBox="0 0 16 16">
                                 <path
@@ -129,7 +130,7 @@
    </header>
 
 <% 
-String nickname = (String) session.getAttribute("nickname");
+
 
 
 FeedDTO fdto = new FeedDTO();
