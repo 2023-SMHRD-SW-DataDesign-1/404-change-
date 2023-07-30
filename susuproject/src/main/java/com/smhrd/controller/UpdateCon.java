@@ -20,7 +20,7 @@ public class UpdateCon extends HttpServlet {
 		String password = request.getParameter("password");
 		String address = request.getParameter("address");
 		String phone = request.getParameter("phone");
-		// DB연결, 값 업데이트
+		// DB연결, 값 업데이트 
 		MemberDAO dao = new MemberDAO();
 		int row = dao.update(new MemberDTO(member_id, password, address, phone)); // password,nickname,age,address,phone
 		System.out.println(row);

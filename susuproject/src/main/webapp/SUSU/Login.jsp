@@ -20,7 +20,7 @@
             </a>
 
         </div>
-
+ 
         <div class="user-actions">
             <!-- 채팅 -->
             <a href="../SUSU/Chat.jsp">
