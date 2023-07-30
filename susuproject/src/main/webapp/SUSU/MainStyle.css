@@ -163,7 +163,7 @@ input.form-control {
 /* 피드 사진 */
 .feed-img img {
     margin-top: 10px;
-    width: 100%;
+    width: 500px;
     height: 600px;
 }
 
