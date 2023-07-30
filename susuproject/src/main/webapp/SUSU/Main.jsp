@@ -242,14 +242,14 @@ ArrayList<ProductDTO>  item_link = pdao.showItemLink(lfeed_list.get(i).getFeed_n
                      <!--items-->
                   </div>
                   <!--item_link-->
-<% } %>
-  <%} %>
                <!--상품반복 끝-->
 
             </div>
             <!--feed-info(상품링크 끝)-->
          </div>
          <!--메인 피드(좋아요순 정렬끝)-->
+<% } %>
+  <%} %>
 
 
 
