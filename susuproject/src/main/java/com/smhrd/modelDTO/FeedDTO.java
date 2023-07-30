@@ -34,7 +34,7 @@ public class FeedDTO {
 	
     public FeedDTO(int feedNo, String nickname, int likes) {
         super();
-        this.feedNo = feedNo;
+        this.feed_no = feedNo;
         this.nickname = nickname;
         this.feedVideos = feedVideos;
         this.likes = likes;
@@ -52,7 +52,7 @@ public class FeedDTO {
 
 	public FeedDTO(int feedNo, String text) {
 		super();
-		this.feedNo = feedNo;
+		this.feed_no = feedNo;
 		this.text = text;
 	}
     
