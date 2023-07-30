@@ -5,12 +5,14 @@
 <mapper namespace="com.smhrd.mapper.ProductMapper">
   
   <select id="showItemList" parameterType="String" resultType="ProductDTO"  >
-  	select * from product where nickname= #{nickanme}
+  	select * from product where nickname= #{nickname}
   </select>
 
 	<select id="showItemLink" parameterType="int" resultType="ProductDTO">
 		select * from product where feed_no=#{feed_no}
 	</select>
 
-  
+   <select id="showProduct" parameterType="string" resultType="ProductDTO">
+   	select * from product where product_name = #{product_name}
+    </select>
 </mapper>

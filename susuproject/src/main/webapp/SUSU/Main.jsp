@@ -181,7 +181,7 @@ ArrayList<FeedDTO> lfeed_list = fdao.showAllLikesFeeds();
             <!-- 피드 이미지 -->
             <div class="feed-img">
                <!--사진을 클릭하면 피드 상세화면으로 이동 -->
-               <a href="../ChannelDetail/FeedDetail.jsp"> 
+               <a href="../ChannelDetail/FeedDetail.jsp?feed_no=<%=lfeed_list.get(i).getFeed_no() %>"> 
                <img src="../img2/<%= lfeed_list.get(i).getFeed_image1() %>.jpg" class="card-img-top" alt="피드 사진">
                </a>
             </div>
