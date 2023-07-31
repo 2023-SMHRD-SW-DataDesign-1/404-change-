@@ -206,8 +206,9 @@ input.form-control {
 
 
 /* 작가 닉네임 */
-.user-name {
-    color: #212121;
+.nickname {
+    color: rgb(12, 12, 12);
+    text-weight: 600;
     vertical-align: middle;
 
 }
