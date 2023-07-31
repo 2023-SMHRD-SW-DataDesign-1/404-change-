@@ -15,7 +15,7 @@
 	}
 	#messageWindow{
 		background: black;
-		color: greenyellow;
+		color: #FCD7CD;
 	}
 	#inputMessage{
 		width:500px;
@@ -46,7 +46,7 @@
 		max-height: 600px;
 		overflow: scroll;
 		overflow-x:hidden;
-		background: #9bbbd4;
+		background: #FCFCFC;
 	}
 	
 	.chat{
@@ -59,7 +59,7 @@
 		text-align: left;
         height:auto;
         word-break : break-all;
-        background: #ffffff;
+        background: #a7a5a4;
         width:auto;
         display:inline-block;
         border-radius: 10px 10px 10px 10px;
@@ -100,11 +100,23 @@
 		text-align: right;
 	}
 	
-	
+	.chat_wrap .header {
+  width: 100%;
+  font-size: 14px;
+  padding: 15px 0;
+  background: #a7a5a4;
+  color: white;
+  text-align: center;
+}
 	
 </style>
 </head>
 <body>
+   <div class="chat_wrap">
+        <div class="header">
+            CHAT
+        </div>
+
 	<div id="main-container">
 		<div id="chat-container">
 			

@@ -1,4 +1,4 @@
- <%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -68,7 +68,7 @@
 
     <div class="login-container">
         <h1>로그인</h1>
-        <form action="../LoginControl" method="post" >
+        <form action="/loginControl" method="post" >
             <div class="form-group">
                 <label for="id">아이디</label>
                 <input type="text" id="id" name="member_id" required>
@@ -77,32 +77,62 @@
                 <label for="password">비밀번호</label>
                 <input type="password" id="password" name="password" required>
             </div>
-        
+        </form>
 
         <h4>소셜계정으로 간편로그인</h4>
         <div class="line"></div>
         <div class="sns">
 
 
-            <a href="" id="naver"><img
-                    src="https://m.joyandroma.com/moa/img/default/login_naver.png"
-                    alt="naver_logo"></a>
-            <a href="" id="kakao"><img src="https://cdn.imweb.me/thumbnail/20220403/a8e484f2dfe39.png"
-                    alt="kakao_logo"></a>
-            <a href="" id="google"><img
-                    src="https://i.pinimg.com/originals/a7/53/aa/a753aab7becfdde277e000be2350801f.png"
-                    alt="google_logo"></a>
+         <!-- 카카오 로그인 스크립트 -->
+<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+
+<script>
+Kakao.init('57f231be5a43c7b9529662fae0cb6316'); //발급받은 키 중 javascript키를 사용해준다.
+console.log(Kakao.isInitialized()); // sdk초기화여부판단
+//카카오로그인
+function kakaoLogin() {
+    Kakao.Auth.login({
+      success: function (response) {
+        Kakao.API.request({
+          url: '/v2/user/me',
+          data: {
+               property_keys: ['kakao_account.email'],
+             },
+          success: function (response) {
+             location.href="./Main.jsp";
+             console.log(response)
+          },
+          fail: function (error) {
+             location.href="./Login.jsp";
+            console.log(error)
+          },
+        })
+      },
+      fail: function (error) {
+         location.href="Login.jsp";
+        console.log(error)
+      },
+    })
+  }
+
+</script>
+ <!-- 카카오 로그인 스크립트 -->   
+            <a onclick="kakaoLogin();" id="kakao"><img src="https://cdn.imweb.me/thumbnail/20220403/a8e484f2dfe39.png"
+                    alt="kakao_logo"></a>   
+      <!--      <a href="" id="kakao"><img src="https://cdn.imweb.me/thumbnail/20220403/a8e484f2dfe39.png"
+                    alt="kakao_logo"></a>  -->  
+           
         </div>
 
 
         <div id="submit">
-            <!-- <a href="./Main.jsp"> -->
+            <a href="./Main.jsp">
                 <button type="submit">로그인</button>
 
-            <!-- </a> -->
+            </a>
 
         </div>
-        </form>
         <p>아직 회원이 아니신가요? <a href="./Join.jsp">회원가입</a></p>
     </div>
 </body>
