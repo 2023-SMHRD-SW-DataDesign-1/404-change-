@@ -188,7 +188,7 @@ input.form-control {
    text-decoration: none;
    text-align: left;
    color: #212121;
-  
+   
 
 }
 
@@ -196,6 +196,14 @@ input.form-control {
     margin-top: 20px;
 
 }
+
+.feed-text p{
+	margin-top: 10px;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid rgb(233, 228, 228);
+}
+
 
 /* 작가 닉네임 */
 .user-name {
