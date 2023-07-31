@@ -43,14 +43,13 @@ public class FeedDAO {
 	// JSTL에서 메소드 불러오려면 메소드 타입이 static이어야 함
 	// 게시글 전체 조회 메소드
 	// select * from web_board order by b_date(최신순);
-	public static ArrayList<FeedCommentDTO> showFeedComment() {
+	public static ArrayList<FeedCommentDTO> showFeedComment(int feed_no) {
 
 		// 1. 연결하기
 		SqlSession session = sqlSessionFactory.openSession(true);
 
 		// 2. sql문장 실행하기
-		ArrayList<FeedCommentDTO> comment_list = (ArrayList) session.selectList("showFeedComment");
-
+		ArrayList<FeedCommentDTO> comment_list = (ArrayList) session.selectList("showFeedComment",feed_no);
 		// 3. 연결 종료하기
 		session.close();
 
@@ -148,4 +147,13 @@ public class FeedDAO {
 	return cnt;
 	}
 	
+	public static FeedDTO showFeedDetail(int feed_no) {
+		SqlSession session=sqlSessionFactory.openSession(true);
+
+		FeedDTO FeedDTO = session.selectOne("showFeedDetail", feed_no );
+
+		session.close();
+
+	return FeedDTO;
+	}
 }

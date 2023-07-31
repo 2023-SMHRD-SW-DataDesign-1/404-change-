@@ -68,7 +68,7 @@
 
     <div class="login-container">
         <h1>로그인</h1>
-        <form action="/loginControl" method="post" >
+        <form action="../LoginControl" method="post" >
             <div class="form-group">
                 <label for="id">아이디</label>
                 <input type="text" id="id" name="member_id" required>

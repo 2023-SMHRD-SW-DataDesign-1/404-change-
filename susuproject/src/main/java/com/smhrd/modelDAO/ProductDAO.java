@@ -42,5 +42,19 @@ public class ProductDAO {
 		return  item_list;	
 	}
 	
+	public static ProductDTO showProduct(String product_name){
+
+		//1. 연결하기
+		SqlSession session=sqlSessionFactory.openSession(true);
+
+		//2. sql문장 실행하기
+		ProductDTO p = session.selectOne("showProduct",product_name);
+
+		//3. 연결 종료하기
+		session.close();
+
+		return  p;	
+	}
+	
 	
 }

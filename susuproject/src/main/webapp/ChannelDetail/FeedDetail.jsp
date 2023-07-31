@@ -1,3 +1,5 @@
+<%@page import="com.smhrd.modelDAO.ProductDAO"%>
+<%@page import="com.smhrd.modelDTO.ProductDTO"%>
 <%@page import="com.smhrd.modelDTO.FeedDTO"%>
 <%@page import="com.smhrd.modelDTO.FeedCommentDTO"%>
 <%@page import="com.smhrd.modelDAO.FeedDAO"%>
@@ -125,7 +127,14 @@
 
 
 	</header>
-
+	<%
+	int feed_no = Integer.parseInt(request.getParameter("feed_no"));
+	FeedDTO fdto = new FeedDTO();
+	FeedDAO fdao = new FeedDAO();
+	ProductDAO pdao = new ProductDAO();
+	FeedDTO f = fdao.showFeedDetail(feed_no);
+	ProductDTO p = pdao.showProduct(f.getText());
+	%>
 	<!-- feed -->
 	<div class="main_feed">
 		<div class="left_feed">
@@ -143,7 +152,7 @@
 
 						<div class="feed_name_txt">
 							<!-- 작가 닉네임 -->
-							<span> suzy022 </span>
+							<span> <%= f.getNickname() %></span>
 
 						</div>
 					</a>
@@ -155,32 +164,32 @@
 
 				<!-- 피드 이미지 -->
 				<img class="feed_img"
-					src="https://www.banul.co.kr/shopimages/banulfren/141000000003.jpg?1631086889">
-				<p class="feed_txt">여름을 맞아 걸치기 좋은 가디건을 만들어봤어요^^</p>
+					src="../img2/<%= f.getFeed_image1() %>.jpg">
+				<p class="feed_txt"><%= f.getText() %></p>
 
 				<!-- 상품연결링크 -->
 
 				<div class="item_link">
 					<p class="title">상품태그</p>
 
-					<a href="../Item/ItemDetail.jsp">
+					<a href="../Item/ItemDetail.jsp?product_no=<%=p.getProduct_no() %>">
 						<div class="item-1">
 							<div>
 
 								<img
-									src="https://www.banul.co.kr/shopimages/banulfren/141000000003.jpg?1631086889"
+									src="../img2/<%= f.getFeed_image1() %>.jpg"
 									alt="">
 							</div>
 
 							<div>
 
-								<p class="item_name">[banul wear] 슬림핏 가디건</p>
+								<p class="item_name"><%= p.getProduct_name() %></p></p>
 							</div>
 
 							<div>
 
 								<p class="item_price">
-									<b>23,400원</b>
+									<b><%= p.getProduct_price() %></b>
 								</p>
 							</div>
 						</div>
@@ -220,16 +229,15 @@
 				</div>
 
 				<div class="feed_reply">
-					<p>댓글</p>
+					<p>댓글</p>						
 					 <!-- 댓글 출력 -->
-					<c:set var="comment_list" value="${FeedDAO.showFeedComment()}"></c:set>
+					<c:set var="comment_list" value="${FeedDAO.showFeedComment(param.feed_no)}"></c:set>
 						
 						   <c:forEach var="comment" items="${comment_list}" varStatus="status">
-						      
 						      <div>
 								<img src="../img/profile_img.png" alt="회원프로필사진">
 								<p class="reply_txt">
-									<b>${comment.nickname}</b>${comment.text}
+									<b>${comment.nickname }</b>${comment.text}
 								</p>
 
 							</div>             
@@ -238,17 +246,17 @@
 					 
 					
 
-				<input type="hidden" name="feedNo" value="asdf"> 
+				
 
 					
 				</div>
 				<div>
 						<!-- 댓글 입력 -->
 						<form action="../CommentCon" type="post" id="cmtForm">
-							<input type="hidden" name="feedNo" value="1"> 
+							<input type="hidden" name="feed_no" value="${param.feed_no}"> 
 							
-							<input type="hidden" id="text" name="text" value="asdf"> 
-							<input type="hidden" name="nickname" value="aaa"> 
+							<input type="hidden" id="text" name="text" value=""> 
+							<input type="hidden" name="nickname" value="${info.nickname}">
 							<!-- <input type="text" name="text">
 							<input type="submit"> -->
 						</form>
