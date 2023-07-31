@@ -51,6 +51,7 @@
 
       <a href="../SUSU/JoinMain.jsp">회원가입</a> <a href="../SUSU/Login.jsp">로그인</a>
 
+
    </div>
    <header class="header">
       <!-- 로고 -->

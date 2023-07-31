@@ -121,11 +121,11 @@
         <div class="order-container">
 
             <div class="item_img">
-                <img src="https://www.banul.co.kr/shopimages/banulfren/141000000003.jpg?1631086889" alt="주문한 상품 이미지">
+                <img src="../img2/p35.jpg" alt="주문한 상품 이미지">
                 <div class="item_info">
 
-                    <p>[banul wear] 슬림핏 가디건</p>
-                    <p>옵션: 민트(size.S)</p>
+                    <p>🌻꽃 한송이 백참🌻</p>
+                    <p>옵션: 블랙</p>
                     <p>주문수량: 1개</p>
                 </div>
             </div>
@@ -136,7 +136,7 @@
                 <table>
                     <tr>
                         <td>결제금액</td>
-                        <td class="price">23,400원</td>
+                        <td class="price">4,000원</td>
                     </tr>
 
                     <tr>
@@ -147,7 +147,7 @@
 
                     <tr>
                         <td>총 결제금액</td>
-                        <td class="price">36,400원</td>
+                        <td class="price">7,000원</td>
                     </tr>
                 </table>
             </div>
@@ -232,9 +232,9 @@
                             </tr>
 
                             <tr>
-                                <td>23,400원</td>
+                                <td>4,000원</td>
                                 <td>3,000원 </td>
-                                <td>26,400원</td>
+                                <td>7,000원</td>
                             </tr>
 
 

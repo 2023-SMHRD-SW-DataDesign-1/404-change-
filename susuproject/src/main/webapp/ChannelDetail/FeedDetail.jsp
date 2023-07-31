@@ -256,7 +256,7 @@
 							<input type="hidden" name="feed_no" value="${param.feed_no}"> 
 							
 							<input type="hidden" id="text" name="text" value=""> 
-							<input type="hidden" name="nickname" value="${info.nickname}">
+							<input type="hidden" name="nickname" value="보라보라">
 							<!-- <input type="text" name="text">
 							<input type="submit"> -->
 						</form>
