@@ -192,7 +192,7 @@ ArrayList<FeedDTO> lfeed_list = fdao.showAllLikesFeeds();
             <div class="feed-text">
 
                <a href="../ChannelDetail/FeedDetail.jsp">
-                  <p><%=txt %>></p>
+                  <p><%=txt %></p>
                </a>
             </div>
 
