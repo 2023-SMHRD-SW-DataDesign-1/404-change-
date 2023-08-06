@@ -64,7 +64,7 @@
     <td><a href="https://github.com/philosokey-M" target='_blank>github</a></td>
     <td><a href="https://github.com/DeboraKim1016" target='_blank>github</a></td>
     <td><a href="https://github.com/dldbsgh00005" target='_blank>github</a></td>
-    <td><a href="https://github.com/???" target='_blank>github</a></td>
+    <td><a href="https://github.com/jinchanho" target='_blank>github</a></td>
   </tr>
     <tr>
     <td>담당</td>
