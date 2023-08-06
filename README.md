@@ -25,7 +25,8 @@
 <br>
 
 ## ✏️ 유스케이스
-<br>
+![image](https://github.com/2023-SMHRD-SW-DataDesign-1/404-change-/assets/134522874/95226750-63e2-44ac-9193-0dd155e1ad58)
+
 
 ## ✏️ 서비스 흐름도
 <br>
@@ -39,6 +40,27 @@
 <br>
 
 ## 👑 팀원역할
-<br>
+![image](https://github.com/2023-SMHRD-SW-DataDesign-1/404-change-/assets/134522874/6f6effe0-3e94-4180-a7b1-a577422f621d)
+
 
 ## 🔑 트러블슈팅
+<br>
+<h3>실시간 채팅 </h3>
+<p>실시간 채팅의 데이터 전송 방식을 서버를 항상 열어두는 long polling방식으로 개발을 했으나 서버를 열어둔 채로 유지하는 과정이 불안정해서 잦은 에러가 발생했습니다.</p>
+<p>long polling 방식이 아닌 web socket방식으로 변경하자 전보다 서버가 안정적으로 운영되었고 단체 채팅도 가능하게 되었습니다. </p>
+<br>
+<br>
+<h3>mybatis error </h3>
+<p>'sqlSession is null' 이라는 에러가 반복적으로 발생했습니다. mybatis 환경이나 mapper의 namespace 등 틀린 부분이 없었는데도 에러가 반복되었습니다.</p>
+<p>DAO의 메소드 안에 mapper로 보낼 때 쓰는 ID값 앞에 'com.smhrd.FeedMapper.showFeed'라고 주소값을 직접 적어주니 정상적으로 실행됐습니다. </p>
+<br>
+<br>
+<h3>카카오 SNS로그인 API error </h3>
+<p>카카오 로그인API를 실행시키자 404에러가 발생했습니다.</p>
+<p>원인을 몰라 카카오 관리자에게 문의하자 사용중인 API가 구버전인 것을 알게 되었고</p>
+<p>신버전으로 바꾸자 정상적으로 실행되었습니다.</p>
+<br>
+<br>
+<h3>크롤링 </h3>
+<p>실시간으로 데이터가 바뀌는 사이트에서 크롤링을 하다보니 동시에 여러 페이지의 데이터를 수집해야 했었는데 이 과정에서 원하는 데이터만 가져오는 것에 어려움이 많았습니다.</p>
+<p>그래서 octopus라는 크롤링 tool을 활용해서 원하는 데이터만을 제대로 크롤링하는데 성공했습니다.</p>
