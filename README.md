@@ -120,7 +120,21 @@
 <br>
  
 ## 🖥️ 화면구성
-<br>
+###메인
+![image](https://github.com/2023-SMHRD-SW-DataDesign-1/404-change-/assets/134493664/0e5fe8fe-c692-4b5a-b1ff-8455546acae2)
+
+###sns 채널 메인
+![image (1)](https://github.com/2023-SMHRD-SW-DataDesign-1/404-change-/assets/134493664/daec1534-2021-47e4-973a-1dedd3ae7972)
+
+###sns 피드
+![image (2)](https://github.com/2023-SMHRD-SW-DataDesign-1/404-change-/assets/134493664/1c8e8cb1-32e5-47e5-91e9-5ea7b7c6ad1b)
+
+###상품상세페이지
+![image](https://github.com/2023-SMHRD-SW-DataDesign-1/404-change-/assets/134493664/f8179a00-787a-41c9-83ca-27c847d77f3d)
+
+###주문페이지
+![image](https://github.com/2023-SMHRD-SW-DataDesign-1/404-change-/assets/134493664/788c1f6e-c650-41c0-997b-fc6ebda16abf)
+
 
 ## 👑 팀원역할
 
