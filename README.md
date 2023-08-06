@@ -110,7 +110,8 @@
 
 
 ## ✏️ 서비스 흐름도
-![서비스흐름도](https://github.com/2023-SMHRD-SW-DataDesign-1/404-change-/assets/134493664/82c7d48e-aa8a-4515-81b1-3106f6249870)
+![서비스흐름도](https://github.com/2023-SMHRD-SW-DataDesign-1/404-change-/assets/134493664/79f5be60-a13e-4f37-aac9-c0877c9fa03b)
+
 
 
 
