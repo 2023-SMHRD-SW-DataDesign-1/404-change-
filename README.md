@@ -158,12 +158,12 @@
   </tr>
     <tr>
     <td>계정링크</td>
-    <td><a href="https://github.com/philosokey-M" target='_blank>github</a></td>
-    <td><a href="https://github.com/DeboraKim1016" target='_blank>github</a></td>
-    <td><a href="https://github.com/dldbsgh00005" target='_blank>github</a></td>
-    <td><a href="https://github.com/jinchanho" target='_blank>github</a></td>
+    <td><a href="https://github.com/philosokey-M" target='_blank'>github</a></td>
+    <td><a href="https://github.com/DeboraKim1016" target='_blank'>github</a></td>
+    <td><a href="https://github.com/dldbsgh00005" target='_blank'>github</a></td>
+    <td><a href="https://github.com/jinchanho" target='_blank'>github</a></td>
   </tr>
-    <tr>
+  <tr>
     <td>담당</td>
     <td> PM / Back-End </td>
     <td> Front-End </td>
@@ -182,7 +182,7 @@
     <td> 좋아요, 댓글 기능 구현</td>
     <td>   </td>
     <td> SNS로그인 기능 구현 </td>
-    <td>  DB설계 및 구축 </td>
+    <td> DB설계 및 구축 </td>
   </tr>
   <tr>
     <td>  </td>
