@@ -40,7 +40,69 @@
 <br>
 
 ## 👑 팀원역할
-![image](https://github.com/2023-SMHRD-SW-DataDesign-1/404-change-/assets/134522874/6f6effe0-3e94-4180-a7b1-a577422f621d)
+
+
+
+<table>
+  <tr>
+    <td>이름</td>
+    <td>김지홍</td>
+    <td>김드보라</td>
+    <td>이윤호</td>
+    <td>진찬호</td>
+  </tr>
+    <tr>
+    <td>계정링크</td>
+    <td><a href="https://github.com/philosokey-M" target='_blank>github</a></td>
+    <td><a href="https://github.com/DeboraKim1016" target='_blank>github</a></td>
+    <td><a href="https://github.com/dldbsgh00005" target='_blank>github</a></td>
+    <td><a href="https://github.com/???" target='_blank>github</a></td>
+  </tr>
+    <tr>
+    <td>담당</td>
+    <td> PM / Back-End </td>
+    <td> Front-End </td>
+    <td> Back-End </td>
+    <td> DB / Front-End </td>
+  </tr>
+  <tr>
+    <td>역할</td>
+    <td> 팔로우 기능 구현 </td>
+    <td> 전체화면설계 및 구현</td>
+    <td> 회원관리기능 </td>
+    <td> 크롤링 </td>
+  </tr>
+  <tr>
+    <td>  </td>
+    <td> 좋아요, 댓글 기능 구현</td>
+    <td>   </td>
+    <td> SNS로그인 기능 구현 </td>
+    <td>  DB설계 및 구축 </td>
+  </tr>
+  <tr>
+    <td>  </td>
+    <td> 피드생성 및 출력</td>
+    <td>   </td>
+    <td> 결제 API </td>
+    <td>  프론트 JS담당  </td>
+  </tr>
+  <tr>
+    <td>  </td>
+    <td> 상품등록 및 출력</td>
+    <td>   </td>
+    <td> 장바구니 </td>
+    <td>  DTO 구축  </td>
+  </tr>
+  <tr>
+    <td>  </td>
+    <td> 실시간 채팅 기능 구현</td>
+    <td>   </td>
+    <td>   </td>
+    <td>   </td>
+  </tr> 
+</table>
+
+
 
 
 ## 🔑 트러블슈팅
