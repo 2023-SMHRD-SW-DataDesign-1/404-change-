@@ -58,7 +58,6 @@
         <td>API</td>
         <td>
           <img src="https://img.shields.io/badge/KakaoLogin-FFCD00?style=for-the-badge&logo=Kakao&logoColor=white" />
-          <img src="https://img.shields.io/badge/KakaoPay-FFCD00?style=for-the-badge&logo=Kakao&logoColor=white" />
           <img src="https://img.shields.io/badge/Octoparse-007ACC?style=for-the-badge&logo=octopusdeploy&logoColor=white" />
           <img src="https://img.shields.io/badge/PortOne-F05032?style=for-the-badge&logo=&logoColor=white" />
         </td>
