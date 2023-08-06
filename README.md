@@ -35,6 +35,7 @@
       <th>구분</th>
       <th>내용</th>
     </tr>
+  
     <tr>
       <td>사용언어</td>
       <td>
@@ -45,6 +46,7 @@
         <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white">
       </td>
     </tr>
+  
     <tr>
       <td>라이브러리</td>
       <td>
@@ -56,17 +58,18 @@
 
       </td>
     </tr>
+    
     <tr>
       <td>API</td>
       <td>
         <img src="https://img.shields.io/badge/KakaoLogin-FFCD00?style=for-the-badge&logo=Kakao&logoColor=white" />
         <img src="https://img.shields.io/badge/KakaoPay-FFCD00?style=for-the-badge&logo=Kakao&logoColor=white" />
-        <img
-          src="https://img.shields.io/badge/Octoparse-007ACC?style=for-the-badge&logo=octopusdeploy&logoColor=white" />
+        <img src="https://img.shields.io/badge/Octoparse-007ACC?style=for-the-badge&logo=octopusdeploy&logoColor=white" />
         <img src="https://img.shields.io/badge/PortOne-F05032?style=for-the-badge&logo=&logoColor=white" />
 
       </td>
     </tr>
+    
     <tr>
       <td>개발도구</td>
       <td>
@@ -76,13 +79,14 @@
 
       </td>
     </tr>
+    
     <tr>
       <td>서버환경</td>
       <td>
-        <img
-          src="https://img.shields.io/badge/Apache Tomcat-D22128?style=for-the-badge&logo=Apache Tomcat&logoColor=white" />
+        <img src="https://img.shields.io/badge/Apache Tomcat-D22128?style=for-the-badge&logo=Apache Tomcat&logoColor=white" />
       </td>
     </tr>
+    
     <tr>
       <td>데이터베이스</td>
       <td>
