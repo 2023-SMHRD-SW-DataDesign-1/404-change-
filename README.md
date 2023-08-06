@@ -99,7 +99,8 @@
 
 
 ## ⚙️ 시스템 아키텍처
-![시스템 아키텍처](https://github.com/2023-SMHRD-SW-DataDesign-1/404-change-/assets/134493664/3e739e47-ddab-496b-91c6-b62de2415ec8)
+![image](https://github.com/2023-SMHRD-SW-DataDesign-1/404-change-/assets/134493664/dbc5f166-f55b-42aa-a057-1f329591d2a0)
+
 
 
 
