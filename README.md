@@ -99,7 +99,6 @@
 
 
 ## ⚙️ 시스템 아키텍처
-<br>
 ![시스템 아키텍처](https://github.com/2023-SMHRD-SW-DataDesign-1/404-change-/assets/134493664/3e739e47-ddab-496b-91c6-b62de2415ec8)
 
 
@@ -110,7 +109,6 @@
 
 
 ## ✏️ 서비스 흐름도
-<br>
 ![서비스흐름도](https://github.com/2023-SMHRD-SW-DataDesign-1/404-change-/assets/134493664/82c7d48e-aa8a-4515-81b1-3106f6249870)
 
 
