@@ -111,6 +111,9 @@
 
 ## ✏️ 서비스 흐름도
 <br>
+![서비스흐름도](https://github.com/2023-SMHRD-SW-DataDesign-1/404-change-/assets/134493664/82c7d48e-aa8a-4515-81b1-3106f6249870)
+
+
 
 ## ✏️ ER 다이어그램
 ![er다이어그램](https://github.com/2023-SMHRD-SW-DataDesign-1/404-change-/assets/105475267/5d6c8d7f-e6d7-490c-8c81-499411820801)
