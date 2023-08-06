@@ -100,6 +100,9 @@
 
 ## ⚙️ 시스템 아키텍처
 <br>
+![시스템 아키텍처](https://github.com/2023-SMHRD-SW-DataDesign-1/404-change-/assets/134493664/d16108b1-b8c5-4134-9e6d-3dc836dcf88a)
+
+
 
 ## ✏️ 유스케이스
 ![image](https://github.com/2023-SMHRD-SW-DataDesign-1/404-change-/assets/134522874/95226750-63e2-44ac-9193-0dd155e1ad58)
